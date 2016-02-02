@@ -1,0 +1,6 @@
+What happens when you initialize a repository? Why do you need to do it?
+// To initialize it in GitHub so that you can version control all your changes. Otherwise it will not have any sort of version control. You can track 
+
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+// Stage is so that you can check files before committing. You can make more reasonable commits because you're being selective about what you commit instead of committing everything at once. This allows you to make better commits that are more logical.
