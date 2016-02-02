@@ -1,0 +1,23 @@
+How did viewing a diff between two versions of a file help you see the bug that was introduced?
+// diff -u file1.txt file2.txt
+// It made it much easier to view and pick out what changes were made in a document to be able to identify what could have gone wrong. Definite time-saver.
+
+How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+// Coding can be anywhere from a few lines to thousands of lines of code. If you save frequently and are able to quickly compare versions of the work you've saved, you're easily able to reduce your troubleshooting effort to just the lines of code changed - otherwise you're stuck combing through those thousands of lines trying to remember what was or could have been changed.
+
+What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+// Pro: The save points make sense and makes it easier to choose what version to review later. It also doesn't keep too many or too little save points. Too many can cause clutter and be difficult to work with on larger projects.
+// Con: If your computer crashes or forget to save, you lose your work. You may forget to save at the right points and not save enough to make the versioning meaningful.
+
+Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+// Git stores projects as repositories and all files within a repository are usually related to one another. When files are related to one another they often (in coding) will cross reference a variable or piece of code that needs to be updated and saved across multiple files at once. Other systems are generally used for separate unrelated instances and the files can usually be treated separately (self-contained) so it mostly makes sense to not save all the files at once.
+
+How can you use the commands git log and git diff to view the history of files?
+// git log can show you the version history of a file. Using this log it will give you a unique ID for each version number and you can use git diff to view the difference between any two versions of a file.
+
+How might using version control make you more confident to make changes that could break something?
+// You can use git log to find each previous version of your code, and sift through each version using git checkout - this will allow you to run your code and test it at every previous version to see at what version a bug occurs. Then you can use git diff to find what code was changed between the versions. git checkout also lets you restart your code from that version or fix it so you don't have to be worried about breaking anything.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+// Working on live projects and testing out my new GitHub skillz.
+
