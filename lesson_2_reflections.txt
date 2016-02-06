@@ -1,6 +1,21 @@
 What happens when you initialize a repository? Why do you need to do it?
 // To initialize it in GitHub so that you can version control all your changes. Otherwise it will not have any sort of version control. You can track 
 
-
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 // Stage is so that you can check files before committing. You can make more reasonable commits because you're being selective about what you commit instead of committing everything at once. This allows you to make better commits that are more logical.
+
+How can you use the staging area to make sure you have one commit per logical change?
+// You'd only add what files are relevant to a single logical change before you commit.
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+// Branches would help you: when you want to do experimental testing on a working version without messing up the production version or when you want to create different versions of the same files. It keeps things organized in separate branches and these branches are virtual so you don't have actual multiple copies around. You're able to merge branches later as well if said exprimental code works out - even  if the master branch has already updated since.
+
+How do the diagrams help you visualize the branch structure?
+// They help you see which branches are in place, what commits there are for each branch, where you are on a branch and what new branches need to be created, if any, to retain a new commit.
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+// You take the changes from both branches and logically put them together. The commits are merged into one branch and you no longer need the branch merged into the other. The diagram easily shows the commits that are coming together and what will be merged.
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+//Pro: saves a lot of time and headache of going through each and every code change from potentially multiple users. Manually it's definitely cleaner and you can review each code change, but it will take a long time. Con: Automatic merging may not select the right things to merge. This can cause code breaks if the wrong combination of code is put together. On the other hand, when it comes across code that has changed in the same area it does automatically detect this and gives the user the final say in correcting for conflicts.
+
