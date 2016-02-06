@@ -1,13 +1,18 @@
 When would you want to use a remote repository rather than keeping all your work local?
 // It secures your files on the web in case something were to happen to your local drive; it can allow you to share and show your repository to others; and it can allow others to work on and contribute to your posted repository.
 
+Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+// If you have multiple people working on a repository together, it could be too confusing for Git and the collaborators to have files constantly updating as work is changed on GitHub. Even if you're working on your current repository alone, you wouldn't want Git to automatically update your remote repository with auto-updates of files older than what you're currently working on.
 
 
+
+Other:
+Remote refers to repositories. When you clone a repository a remote gets setup automatically.
 
 
 Commands:
-
 git remote |  Views and creates remotes
 git remote add <name of remote> <https link to GitHub repository> |  First remote usually called 'origin'
 git remote -v |  Shows verbose version of git remote. Shows both location of which you are fetching and pushing data to
-git push <name of remote> |  Pushes data to remote on GitHub
+git push <name of remote> <name of branch> |  Pushes data to remote on GitHub
+git pull <name of remote> <name of branch> |  Pulls data from GitHub to local repository
