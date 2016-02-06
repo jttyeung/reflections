@@ -19,3 +19,18 @@ What is the result of merging two branches together? Why do we represent it in t
 What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
 //Pro: saves a lot of time and headache of going through each and every code change from potentially multiple users. Manually it's definitely cleaner and you can review each code change, but it will take a long time. Con: Automatic merging may not select the right things to merge. This can cause code breaks if the wrong combination of code is put together. On the other hand, when it comes across code that has changed in the same area it does automatically detect this and gives the user the final say in correcting for conflicts.
 
+
+Commands:
+
+git add |  Add a file to the staging area
+git commit |  Commit the files from the staging area to the repository 
+git status |  Show which files are in the staging area, and which files from the working directory are not part of the repository    
+git diff |  Git diff without arguments is comparing the working directory with the staging area
+git diff --staged |  Compare the staging area with the repository
+git reset --hard |  Undo all changes! There is no rollback for this, so be carefull!
+git checkout master |  Restore the "Head" to the latest check-in
+git log --graph --oneline <branch1> <branch2> |  Shows a visual representation of the commit history within different branches
+git checkout -b new_branch_name |  Creates a new branch and do a checkout on this branch in one call instead of git branch new_branch_name and git checkout new_branch_name
+git merge branch1 branch2  |  Merge two branches, branch2 get merged into branch1
+git branch -d name  |  Remove the branch with the specified name
+git show commitId  |  Show the changes made in this commit compared to the previous version. Works with merged branches
