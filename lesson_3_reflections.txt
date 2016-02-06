@@ -1,0 +1,13 @@
+When would you want to use a remote repository rather than keeping all your work local?
+// It secures your files on the web in case something were to happen to your local drive; it can allow you to share and show your repository to others; and it can allow others to work on and contribute to your posted repository.
+
+
+
+
+
+Commands:
+
+git remote |  Views and creates remotes
+git remote add <name of remote> <https link to GitHub repository> |  First remote usually called 'origin'
+git remote -v |  Shows verbose version of git remote. Shows both location of which you are fetching and pushing data to
+git push <name of remote> |  Pushes data to remote on GitHub
