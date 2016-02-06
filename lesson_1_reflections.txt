@@ -21,3 +21,14 @@ How might using version control make you more confident to make changes that cou
 Now that you have your workspace set up, what do you want to try using Git for?
 // Working on live projects and testing out my new GitHub skillz.
 
+
+
+Commands:
+
+q |  exit git log
+git log |  List the commits and show which files have changed
+git log --stat |  Show addition information about the commits
+git diff id1 id2 |  Compare two commits (id1 = original, id2 = new)
+git clone |  Create a local copy/clone from the repository
+git config --global color.ui auto |  Get colored diff output
+git checkout  |  Shows a previous version of the file
