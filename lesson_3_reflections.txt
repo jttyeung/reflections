@@ -4,10 +4,19 @@ When would you want to use a remote repository rather than keeping all your work
 Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
 // If you have multiple people working on a repository together, it could be too confusing for Git and the collaborators to have files constantly updating as work is changed on GitHub. Even if you're working on your current repository alone, you wouldn't want Git to automatically update your remote repository with auto-updates of files older than what you're currently working on.
 
+Describe the differences between forks, clones, and branches. When would you use one instead of another?
+// You'd fork if you want to copy someone else's project and make slight modifications to it and still give them credit for it. If you want to make contributions to someone's project, forking is a good idea too.
+// You'd clone when you want to copy a project you're working on off GitHub that doesn't meet forking conditions above. You can also clone from within your local repositories.
+// You'd branch when you are creating different versions of the same project. You can also branch when you want to work on something experimental or not ready to be shown off as a final version.
 
+What is the benefit of having a copy of the last known state of the remote stored locally?
+// You want a copy of the last known state of the remote stored locally so you can compare what changes you've made to the remote easily; you can work offline with the most recent version; and you can use it as a way to easily fetch changes from GitHub and then merge with your changes.
 
 Other:
-Remote refers to repositories. When you clone a repository a remote gets setup automatically.
+// Remote refers to repositories. When you clone a repository a remote gets setup automatically (name of remote = origin).
+// Can fork a repository to copy someone else's repository and work on it from there. Instead of: cloning the repository locally, then pushing it on GitHub. This maintains the original author's credit. GitHub keeps track of how many people have forked a repository; makes it easier for forkers to suggest changes back to the original repository creator.
+// Fork from original GitHub user, then clone onto your own local drive.
+// Fast-forward merge: when a merge updates two file to something contained within one file's history of commits
 
 
 Commands:
@@ -16,3 +25,7 @@ git remote add <name of remote> <https link to GitHub repository> |  First remot
 git remote -v |  Shows verbose version of git remote. Shows both location of which you are fetching and pushing data to
 git push <name of remote> <name of branch> |  Pushes data to remote on GitHub
 git pull <name of remote> <name of branch> |  Pulls data from GitHub to local repository
+git fetch <name of remote> |  updates local copy of remote when there are potentially conflicting changes
+git pull = git fetch + git merge
+git log origin/master |  shows log for the remote branch you copied from GitHub and the changes you've made sinces
+git diff origin/master master |  shows differences between the remote branch you last copied from GitHub and master (local branch, same as origin/master but with any updates since)
