@@ -12,11 +12,26 @@ Describe the differences between forks, clones, and branches. When would you use
 What is the benefit of having a copy of the last known state of the remote stored locally?
 // You want a copy of the last known state of the remote stored locally so you can compare what changes you've made to the remote easily; you can work offline with the most recent version; and you can use it as a way to easily fetch changes from GitHub and then merge with your changes.
 
+How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+// You'd collaborate with the use of push and pull requests. It would be easier to manage merges/merge conflicts, keep track of versioning and what changes you want or don't want, and review what changes were made to a project. It may be more difficult if you're working with several different people at once and get constant updates or multiple updates that need to be merged - in that case there's a higher likelihood of merge conflicts and it's easier to get people together in a room and discuss the pieces they want to modify first.
+
+When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+// Anytime you're collaborating with someone you'd want to make changes in a separate branch. When you use a separate branch the project owner(s) can moderate what changes are being made to master and only make them when code is correct/working. When you make changes directly to master, you don't have to go through the trouble of reviewing multiple changes from different sources and it's possible it may save some time and headache of merging changes since the branch-usage method requires a lot more push/pulls to preserve master.
+
+
+
 Other:
 // Remote refers to repositories. When you clone a repository a remote gets setup automatically (name of remote = origin).
 // Can fork a repository to copy someone else's repository and work on it from there. Instead of: cloning the repository locally, then pushing it on GitHub. This maintains the original author's credit. GitHub keeps track of how many people have forked a repository; makes it easier for forkers to suggest changes back to the original repository creator.
 // Fork from original GitHub user, then clone onto your own local drive.
+// When forking a repository, after clone you want to git remote add <name of remote> of the url you forked from. Generally name forked repository remote "origin" and original remote that you are ultimately making changes to "upstream"
 // Fast-forward merge: when a merge updates two file to something contained within one file's history of commits
+// If collaborating and want to make a change to master you should: (1) pull origin master, (2) merge any master changes into your branch and resolve any conflicts, (3) upload the branch and do a pull request so that the master branch is left untouched until it is reviewed.
+
+
+GitHub only:
+// create fork
+// create pull request - Be sure to review you're creating a pull request into the right forks.
 
 
 Commands:
